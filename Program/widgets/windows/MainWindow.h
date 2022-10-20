@@ -12,7 +12,13 @@ class MainWindow : public DarkLightWindow{
     Q_OBJECT
 
 public:
-    MainWindow(QWidget* parent = Q_NULLPTR);
+    explicit MainWindow(QWidget* parent = Q_NULLPTR);
+
+    void setupUI();
+    void setupConnections();
+
+public slots:
+    void changeMode(bool isLight);
 };
 
 

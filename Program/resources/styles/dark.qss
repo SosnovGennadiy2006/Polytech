@@ -1,0 +1,30 @@
+#minimizeButton, #maximizeButton, #closeButton, #changeModeButton
+{
+    border: none;
+}
+
+#minimizeButton QLabel, #maximizeButton QLabel, #closeButton QLabel, #changeModeButton QLabel
+{
+    border: none;
+    background: rgba(0, 0, 0, 0);
+}
+
+#minimizeButton QLabel:hover, #maximizeButton QLabel:hover, #closeButton QLabel:hover, #changeModeButton QLabel:hover
+{
+    background: rgba(255, 255, 255, 60);
+}
+
+#closeButton QLabel:hover
+{
+    background: #e81123;
+}
+
+#titleBar
+{
+    background: #222;
+}
+
+#titleLabel
+{
+    color: #fff;
+}

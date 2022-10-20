@@ -6,6 +6,7 @@
 #define SRC_STYLESHEETSHELPER_H
 
 #include <QFile>
+#include <QVector>
 
 class StyleSheetsHelper {
 public:
@@ -17,6 +18,16 @@ public:
             return "";
         }
         return QLatin1String(file.readAll());
+    }
+
+    static QString mergeStyles(const QVector<QString>& files)
+    {
+        QString result;
+        for (auto& elem : files)
+        {
+            result += loadStyles(elem);
+        }
+        return result;
     }
 };
 

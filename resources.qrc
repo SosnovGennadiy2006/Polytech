@@ -1,6 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>Program/resources/styles/main.qss</file>
+        <file>Program/resources/styles/light.qss</file>
+        <file>Program/resources/styles/dark.qss</file>
+        <file>Program/resources/icons/icon.png</file>
         <file>CustomTitleBar/resources/icons/close_black.png</file>
         <file>CustomTitleBar/resources/icons/close_white.png</file>
         <file>CustomTitleBar/resources/icons/maximize_white.png</file>

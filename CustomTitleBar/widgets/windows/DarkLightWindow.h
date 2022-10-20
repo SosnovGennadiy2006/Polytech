@@ -11,6 +11,7 @@
 class DarkLightWindow : public FramelessWindow{
     Q_OBJECT
 
+protected:
     DarkLightTitleBar* titleBar;
 
 public:

@@ -11,7 +11,7 @@ TitleBar::TitleBar(QWidget* parent)
     setFixedHeight(TITLE_HEIGHT);
     setAttribute(Qt::WA_StyledBackground);
 
-    maximizeIcon = QPixmap(":/CustomTitleBar/resources/icons/minimize_black.png");
+    maximizeIcon = QPixmap(":/CustomTitleBar/resources/icons/maximize_black.png");
     restoreIcon = QPixmap(":/CustomTitleBar/resources/icons/restore_black.png");
 
     mainLayout = new QHBoxLayout(this);

@@ -9,7 +9,8 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(Program main.cpp ../resources.qrc widgets/other/StyleSheetsHelper.h
-        widgets/other/Image.cpp widgets/other/Image.h widgets/windows/MainWindow.h widgets/windows/MainWindow.cpp)
+        widgets/other/Image.cpp widgets/other/Image.h widgets/windows/MainWindow.h
+        widgets/windows/MainWindow.cpp widgets/containers/Workspace.cpp widgets/containers/Workspace.h widgets/buttons/CustomButton.cpp widgets/buttons/CustomButton.h)
 
 target_link_libraries(Program
         Qt::Core
