@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Program/resources/styles/main.qss</file>
+        <file>CustomTitleBar/resources/icons/close_black.png</file>
+        <file>CustomTitleBar/resources/icons/close_white.png</file>
+        <file>CustomTitleBar/resources/icons/maximize_white.png</file>
+        <file>CustomTitleBar/resources/icons/maximize_black.png</file>
+        <file>CustomTitleBar/resources/icons/minimize_white.png</file>
+        <file>CustomTitleBar/resources/icons/minimize_black.png</file>
+        <file>CustomTitleBar/resources/icons/restore_white.png</file>
+        <file>CustomTitleBar/resources/icons/restore_black.png</file>
+        <file>CustomTitleBar/resources/icons/sun.png</file>
+        <file>CustomTitleBar/resources/icons/moon.png</file>
+    </qresource>
+</RCC>

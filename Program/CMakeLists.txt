@@ -1,7 +1,3 @@
-cmake_minimum_required(VERSION 3.20)
-project(src)
-
-set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -12,18 +8,20 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(src main.cpp MainWindow.cpp MainWindow.h widgets/other/StyleSheetsHelper.h
-        widgets/Image.cpp widgets/Image.h)
-target_link_libraries(src
+add_executable(Program main.cpp ../resources.qrc widgets/other/StyleSheetsHelper.h
+        widgets/other/Image.cpp widgets/other/Image.h widgets/windows/MainWindow.h widgets/windows/MainWindow.cpp)
+
+target_link_libraries(Program
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        dwmapi.lib # important!
         )
 
 if (WIN32)
     set(DEBUG_SUFFIX)
     if (CMAKE_BUILD_TYPE MATCHES "Debug")
-#        set(DEBUG_SUFFIX "d")
+        #        set(DEBUG_SUFFIX "d")
     endif ()
     set(QT_INSTALL_PATH "${CMAKE_PREFIX_PATH}")
     if (NOT EXISTS "${QT_INSTALL_PATH}/bin")
@@ -33,18 +31,21 @@ if (WIN32)
         endif ()
     endif ()
     if (EXISTS "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll")
-        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        add_custom_command(TARGET Program POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E make_directory
-                "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
-        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                "$<TARGET_FILE_DIR:Program>/plugins/platforms/")
+        add_custom_command(TARGET Program POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy
                 "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll"
-                "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
+                "$<TARGET_FILE_DIR:Program>/plugins/platforms/")
     endif ()
     foreach (QT_LIB Core Gui Widgets)
-        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        add_custom_command(TARGET Program POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy
                 "${QT_INSTALL_PATH}/bin/Qt6${QT_LIB}${DEBUG_SUFFIX}.dll"
-                "$<TARGET_FILE_DIR:${PROJECT_NAME}>")
+                "$<TARGET_FILE_DIR:Program>")
     endforeach (QT_LIB)
 endif ()
+
+include_directories(../CustomTitleBar)
+target_link_libraries(Program CustomTitleBar)
