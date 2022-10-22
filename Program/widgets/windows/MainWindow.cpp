@@ -13,12 +13,16 @@ MainWindow::MainWindow(QWidget* parent) : DarkLightWindow{parent}
 void MainWindow::setupUI()
 {
     setWindowIcon(QIcon(":/Program/resources/icons/icon.png"));
+    setWindowTitle("Main window");
     setStyleSheet(StyleSheetsHelper::mergeStyles({
             ":/Program/resources/styles/main.qss",
             ":/Program/resources/styles/light.qss"
     }));
 
     setMinimumSize(700, 500);
+
+    workspace = new Workspace(mainWidget);
+    workspace->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 }
 
 void MainWindow::setupConnections()

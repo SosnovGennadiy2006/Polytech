@@ -24,8 +24,17 @@
     background: white;
 }
 
-
 #titleLabel
 {
     color: #000;
+}
+
+#workspace
+{
+    background: #f00;
+}
+
+#mainWidget
+{
+
 }

@@ -7,9 +7,12 @@
 
 #include "widgets/windows/DarkLightWindow.h"
 #include "../../widgets/other/StyleSheetsHelper.h"
+#include "../../widgets/containers/Workspace.h"
 
 class MainWindow : public DarkLightWindow{
     Q_OBJECT
+
+    Workspace* workspace;
 
 public:
     explicit MainWindow(QWidget* parent = Q_NULLPTR);

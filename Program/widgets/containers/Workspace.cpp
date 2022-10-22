@@ -11,11 +11,16 @@ Workspace::Workspace(QWidget* parent) : QWidget{parent}
 
 void Workspace::setupUI()
 {
+    setAttribute(Qt::WA_StyledBackground);
+    setObjectName("workspace");
+
     spacer = new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum);
+    vSpacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
     mainLayout = new QVBoxLayout(this);
 
     imageWidget = new QWidget(this);
+    imageWidget->hide();
 
     imageLayout = new QHBoxLayout(imageWidget);
 
@@ -30,17 +35,19 @@ void Workspace::setupUI()
     optionsLayout = new QHBoxLayout(optionsWidget);
     optionsLayout->setSpacing(5);
 
-    enterImageButton = new CustomButton(optionsWidget);
+    enterImageButton = new StyledButton(optionsWidget);
     enterImageButton->setText("Enter image");
 
-    addCircleButton = new CustomButton(optionsWidget);
+    addCircleButton = new StyledButton(optionsWidget);
     addCircleButton->setText("select circle");
+    addCircleButton->hide();
 
     optionsLayout->addItem(spacer);
     optionsLayout->addWidget(enterImageButton);
     optionsLayout->addWidget(addCircleButton);
 
     infoWidget = new QWidget(this);
+    infoWidget->hide();
 
     infoGrid = new QGridLayout(infoWidget);
 
@@ -80,4 +87,6 @@ void Workspace::setupUI()
 
     mainLayout->addWidget(imageWidget);
     mainLayout->addWidget(optionsWidget);
+    mainLayout->addWidget(infoWidget);
+    mainLayout->addItem(vSpacer);
 }

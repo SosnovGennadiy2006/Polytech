@@ -28,3 +28,8 @@
 {
     color: #fff;
 }
+
+#workspace
+{
+    background: #222;
+}

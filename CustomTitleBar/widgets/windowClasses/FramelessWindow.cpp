@@ -19,6 +19,7 @@ FramelessWindow::FramelessWindow(QWidget* parent)
 
     mainWidget = new QWidget(this);
     mainWidget->setObjectName("mainWidget");
+    mainWidget->setAttribute(Qt::WA_StyledBackground);
     mainWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     layout->addWidget(titleBar);

@@ -10,7 +10,7 @@
 #include <QGridLayout>
 #include <QSpacerItem>
 #include <QLabel>
-#include "../../widgets/buttons/CustomButton.h"
+#include "../../widgets/buttons/StyledButton.h"
 #include "../../widgets/other/Image.h"
 
 class Workspace : public QWidget{
@@ -24,9 +24,8 @@ class Workspace : public QWidget{
 
     QWidget* optionsWidget;
     QHBoxLayout* optionsLayout;
-    QSpacerItem* spacer;
-    CustomButton* enterImageButton;
-    CustomButton* addCircleButton;
+    StyledButton* enterImageButton;
+    StyledButton* addCircleButton;
 
     QWidget* infoWidget;
     QGridLayout* infoGrid;
@@ -38,6 +37,9 @@ class Workspace : public QWidget{
     QLabel* info1;
     QLabel* info2;
     QLabel* info3;
+
+    QSpacerItem* spacer;
+    QSpacerItem* vSpacer;
 
 public:
     explicit Workspace(QWidget* parent = Q_NULLPTR);

@@ -7,11 +7,11 @@
 
 #include <QPushButton>
 
-class CustomButton : public QPushButton {
+class StyledButton : public QPushButton {
     Q_OBJECT
 
 public:
-    explicit CustomButton(QWidget* parent = Q_NULLPTR);
+    explicit StyledButton(QWidget* parent = Q_NULLPTR);
 };
 
 
