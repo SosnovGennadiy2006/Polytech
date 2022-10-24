@@ -28,3 +28,32 @@
 {
     color: #fff;
 }
+
+#welcomeLabel1, #welcomeLabel2
+{
+    color: #fff;
+}
+
+#welcomeWidget
+{
+    background: #222;
+}
+
+#colorButton
+{
+    border: none;
+    border-radius: 5px;
+}
+
+#colorButton QLabel
+{
+    border: none;
+    border-radius: 5px;
+    background: #f48225;
+    color: #fff;
+}
+
+#colorButton QLabel:hover
+{
+    background: #E58230;
+}

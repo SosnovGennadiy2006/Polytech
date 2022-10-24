@@ -21,6 +21,8 @@ void Workspace::setupUI()
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(0);
 
+    welcome = new WelcomeContainer(this);
+
     imageWidget = new QWidget(this);
     imageWidget->hide();
 
@@ -87,8 +89,13 @@ void Workspace::setupUI()
     infoGrid->addWidget(info2, 1, 2);
     infoGrid->addWidget(info3, 2, 2);
 
+    mainLayout->addWidget(welcome);
     mainLayout->addWidget(imageWidget);
     mainLayout->addWidget(optionsWidget);
     mainLayout->addWidget(infoWidget);
-    mainLayout->addItem(vSpacer);
+}
+
+void Workspace::setIsLight(bool isLight)
+{
+    welcome->setIsLight(isLight);
 }

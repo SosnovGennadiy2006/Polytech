@@ -38,6 +38,7 @@ void MainWindow::setupConnections()
 
 void MainWindow::changeMode(bool isLight)
 {
+    workspace->setIsLight(isLight);
     if (isLight)
     {
         setStyleSheet(StyleSheetsHelper::mergeStyles({

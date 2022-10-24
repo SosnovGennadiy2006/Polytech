@@ -13,6 +13,8 @@ TitleBar::TitleBar(QWidget* parent)
 
     maximizeIcon = QPixmap(":/resources/icons/maximize_black.png");
     restoreIcon = QPixmap(":/resources/icons/restore_black.png");
+    closeIcon = QPixmap(":/resources/icons/close_black.png");
+    closeHoverIcon = QPixmap(":/resources/icons/close_white.png");
 
     mainLayout = new QHBoxLayout(this);
 
@@ -60,11 +62,11 @@ TitleBar::TitleBar(QWidget* parent)
     mainLayout->setContentsMargins(3, 0, 0, 0);
 
     _isMaximized = false;
+
+    connect(closeButton, &CustomButton::hovered, this, &TitleBar::setCloseButton);
 }
 
-TitleBar::~TitleBar()
-{
-}
+TitleBar::~TitleBar() = default;
 
 void TitleBar::mouseDoubleClickEvent(QMouseEvent* event)
 {
@@ -104,4 +106,14 @@ void TitleBar::updateMaximizeButton()
         return;
     }
     maximizeButton->setIcon(maximizeIcon);
+}
+
+void TitleBar::setCloseButton(bool isHovered)
+{
+    if (isHovered)
+    {
+        closeButton->setIcon(closeHoverIcon);
+        return;
+    }
+    closeButton->setIcon(closeIcon);
 }

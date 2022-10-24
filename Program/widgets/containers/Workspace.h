@@ -12,11 +12,16 @@
 #include <QLabel>
 #include "../../widgets/buttons/StyledButton.h"
 #include "../../widgets/other/Image.h"
+#include "WelcomeContainer.h"
+
+class StyledButton;
 
 class Workspace : public QWidget{
     Q_OBJECT
 
     QVBoxLayout* mainLayout;
+
+    WelcomeContainer* welcome;
 
     QWidget* imageWidget;
     QHBoxLayout* imageLayout;
@@ -45,6 +50,9 @@ public:
     explicit Workspace(QWidget* parent = Q_NULLPTR);
 
     void setupUI();
+
+public slots:
+    void setIsLight(bool isLight);
 };
 
 

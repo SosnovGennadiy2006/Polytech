@@ -19,6 +19,11 @@
     background: #e81123;
 }
 
+#welcomeLabel1, #welcomeLabel2
+{
+    color: #222;
+}
+
 #titleBar
 {
     background: white;
@@ -28,3 +33,30 @@
 {
     color: #000;
 }
+
+#welcomeWidget
+{
+    background: #fff;
+}
+
+#colorButton
+{
+    border: none;
+    border-radius: 5px;
+}
+
+#colorButton QLabel
+{
+    border: none;
+    border-radius: 5px;
+    background: #0a95ff;
+    color: #fff;
+}
+
+#colorButton QLabel:hover
+{
+    background: #2389da;
+}
+
+
+

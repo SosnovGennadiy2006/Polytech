@@ -15,6 +15,8 @@
 #include "../../widgets/other/TitleBarProperties.h"
 #include "../../widgets/buttons/CustomButton.h"
 
+class CustomButton;
+
 class TitleBar : public QWidget
 {
     Q_OBJECT
@@ -45,6 +47,11 @@ protected:
 
     QPixmap maximizeIcon;
     QPixmap restoreIcon;
+    QPixmap closeIcon;
+    QPixmap closeHoverIcon;
+
+private slots:
+    void setCloseButton(bool isHovered);
 };
 
 #endif//POLYTECH_TITLEBAR_H

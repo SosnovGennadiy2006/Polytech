@@ -30,6 +30,7 @@ void DarkLightTitleBar::toggleMode()
     {
         maximizeIcon = QPixmap(":/resources/icons/maximize_black.png");
         restoreIcon = QPixmap(":/resources/icons/restore_black.png");
+        closeIcon = QPixmap(":/resources/icons/close_black.png");
 
         minimizeButton->setIcon(QPixmap(":/resources/icons/minimize_black.png"));
         closeButton->setIcon(QPixmap(":/resources/icons/close_black.png"));
@@ -42,6 +43,7 @@ void DarkLightTitleBar::toggleMode()
     }
     maximizeIcon = QPixmap(":/resources/icons/maximize_white.png");
     restoreIcon = QPixmap(":/resources/icons/restore_white.png");
+    closeIcon = QPixmap(":/resources/icons/close_white.png");
 
     minimizeButton->setIcon(QPixmap(":/resources/icons/minimize_white.png"));
     closeButton->setIcon(QPixmap(":/resources/icons/close_white.png"));
