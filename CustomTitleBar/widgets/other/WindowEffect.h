@@ -2,8 +2,8 @@
 // Created by genas on 03.10.2022.
 //
 
-#ifndef NOTESOFFICE_WINDOWEFFECT_H
-#define NOTESOFFICE_WINDOWEFFECT_H
+#ifndef POLYTECH_WINDOWEFFECT_H
+#define POLYTECH_WINDOWEFFECT_H
 
 #include "windows.h"
 #include <dwmapi.h>
@@ -18,4 +18,4 @@ namespace WindowEffect
     void addWindowAnimation(HWND hWnd);
 };
 
-#endif//NOTESOFFICE_WINDOWEFFECT_H
+#endif//POLYTECH_WINDOWEFFECT_H

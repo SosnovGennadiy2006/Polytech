@@ -18,6 +18,8 @@ void Workspace::setupUI()
     vSpacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
     mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setSpacing(0);
 
     imageWidget = new QWidget(this);
     imageWidget->hide();
@@ -31,6 +33,7 @@ void Workspace::setupUI()
     imageLayout->addItem(spacer);
 
     optionsWidget = new QWidget(this);
+    optionsWidget->hide();
 
     optionsLayout = new QHBoxLayout(optionsWidget);
     optionsLayout->setSpacing(5);
@@ -40,7 +43,6 @@ void Workspace::setupUI()
 
     addCircleButton = new StyledButton(optionsWidget);
     addCircleButton->setText("select circle");
-    addCircleButton->hide();
 
     optionsLayout->addItem(spacer);
     optionsLayout->addWidget(enterImageButton);

@@ -2,8 +2,8 @@
 // Created by genas on 03.10.2022.
 //
 
-#ifndef NOTESOFFICE_TITLEBAR_H
-#define NOTESOFFICE_TITLEBAR_H
+#ifndef POLYTECH_TITLEBAR_H
+#define POLYTECH_TITLEBAR_H
 
 #include <QWidget>
 #include <QToolButton>
@@ -47,4 +47,4 @@ protected:
     QPixmap restoreIcon;
 };
 
-#endif//NOTESOFFICE_TITLEBAR_H
+#endif//POLYTECH_TITLEBAR_H

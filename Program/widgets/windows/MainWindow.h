@@ -2,15 +2,18 @@
 // Created by genas on 03.10.2022.
 //
 
-#ifndef NOTESOFFICE_MAINWINDOW_H
-#define NOTESOFFICE_MAINWINDOW_H
+#ifndef POLYTECH_MAINWINDOW_H
+#define POLYTECH_MAINWINDOW_H
 
+#include <QVBoxLayout>
 #include "widgets/windows/DarkLightWindow.h"
 #include "../../widgets/other/StyleSheetsHelper.h"
 #include "../../widgets/containers/Workspace.h"
 
 class MainWindow : public DarkLightWindow{
     Q_OBJECT
+
+    QVBoxLayout* mainLayout;
 
     Workspace* workspace;
 
@@ -25,4 +28,4 @@ public slots:
 };
 
 
-#endif//NOTESOFFICE_MAINWINDOW_H
+#endif//POLYTECH_MAINWINDOW_H

@@ -2,8 +2,8 @@
 // Created by genas on 03.10.2022.
 //
 
-#ifndef NOTESOFFICE_FRAMELESSWINDOW_H
-#define NOTESOFFICE_FRAMELESSWINDOW_H
+#ifndef POLYTECH_FRAMELESSWINDOW_H
+#define POLYTECH_FRAMELESSWINDOW_H
 
 #include <QWidget>
 #include <windows.h>
@@ -37,4 +37,4 @@ private:
     RECT workArea;
 };
 
-#endif//NOTESOFFICE_FRAMELESSWINDOW_H
+#endif//POLYTECH_FRAMELESSWINDOW_H

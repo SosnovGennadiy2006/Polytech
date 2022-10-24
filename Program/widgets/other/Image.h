@@ -2,8 +2,8 @@
 // Created by Student on 17.10.2022.
 //
 
-#ifndef SRC_IMAGE_H
-#define SRC_IMAGE_H
+#ifndef POLYTECH_IMAGE_H
+#define POLYTECH_IMAGE_H
 
 #include <QWidget>
 
@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif //SRC_IMAGE_H
+#endif //POLYTECH_IMAGE_H

@@ -2,8 +2,8 @@
 // Created by Student on 17.10.2022.
 //
 
-#ifndef SRC_STYLESHEETSHELPER_H
-#define SRC_STYLESHEETSHELPER_H
+#ifndef POLYTECH_STYLESHEETSHELPER_H
+#define POLYTECH_STYLESHEETSHELPER_H
 
 #include <QFile>
 #include <QVector>
@@ -31,4 +31,4 @@ public:
     }
 };
 
-#endif //SRC_STYLESHEETSHELPER_H
+#endif //POLYTECH_STYLESHEETSHELPER_H

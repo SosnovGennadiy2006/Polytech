@@ -11,8 +11,8 @@ TitleBar::TitleBar(QWidget* parent)
     setFixedHeight(TITLE_HEIGHT);
     setAttribute(Qt::WA_StyledBackground);
 
-    maximizeIcon = QPixmap(":/CustomTitleBar/resources/icons/maximize_black.png");
-    restoreIcon = QPixmap(":/CustomTitleBar/resources/icons/restore_black.png");
+    maximizeIcon = QPixmap(":/resources/icons/maximize_black.png");
+    restoreIcon = QPixmap(":/resources/icons/restore_black.png");
 
     mainLayout = new QHBoxLayout(this);
 
@@ -29,7 +29,7 @@ TitleBar::TitleBar(QWidget* parent)
     minimizeButton->setFlat(true);
     minimizeButton->setFixedSize(SYS_BUTTON_WIDTH, SYS_BUTTONS_HEIGHT);
     minimizeButton->setObjectName("minimizeButton");
-    minimizeButton->setIcon(QPixmap(":/CustomTitleBar/resources/icons/minimize_black.png"));
+    minimizeButton->setIcon(QPixmap(":/resources/icons/minimize_black.png"));
     minimizeButton->setCursor(QCursor(Qt::PointingHandCursor));
     connect(minimizeButton, &QPushButton::clicked, this->window(), &QWidget::showMinimized);
 
@@ -37,7 +37,7 @@ TitleBar::TitleBar(QWidget* parent)
     maximizeButton->setFlat(true);
     maximizeButton->setFixedSize(SYS_BUTTON_WIDTH, SYS_BUTTONS_HEIGHT);
     maximizeButton->setObjectName("maximizeButton");
-    maximizeButton->setIcon(QPixmap(":/CustomTitleBar/resources/icons/maximize_black.png"));
+    maximizeButton->setIcon(QPixmap(":/resources/icons/maximize_black.png"));
     maximizeButton->setCursor(QCursor(Qt::PointingHandCursor));
     connect(maximizeButton, &QPushButton::clicked, this, &TitleBar::toggleMaxState);
 
@@ -45,7 +45,7 @@ TitleBar::TitleBar(QWidget* parent)
     closeButton->setFlat(true);
     closeButton->setFixedSize(SYS_BUTTON_WIDTH, SYS_BUTTONS_HEIGHT);
     closeButton->setObjectName("closeButton");
-    closeButton->setIcon(QPixmap(":/CustomTitleBar/resources/icons/close_black.png"));
+    closeButton->setIcon(QPixmap(":/resources/icons/close_black.png"));
     closeButton->setCursor(QCursor(Qt::PointingHandCursor));
     connect(closeButton, &QPushButton::clicked, this->window(), &QWidget::close);
 

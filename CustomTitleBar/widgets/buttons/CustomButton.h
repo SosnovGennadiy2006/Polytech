@@ -2,8 +2,8 @@
 // Created by genas on 03.10.2022.
 //
 
-#ifndef NOTESOFFICE_CUSTOMBUTTON_H
-#define NOTESOFFICE_CUSTOMBUTTON_H
+#ifndef POLYTECH_CUSTOMBUTTON_H
+#define POLYTECH_CUSTOMBUTTON_H
 
 #include <QPushButton>
 #include <QHBoxLayout>
@@ -42,4 +42,4 @@ public:
     }
 };
 
-#endif//NOTESOFFICE_CUSTOMBUTTON_H
+#endif//POLYTECH_CUSTOMBUTTON_H

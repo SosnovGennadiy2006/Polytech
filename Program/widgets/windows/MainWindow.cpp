@@ -12,17 +12,23 @@ MainWindow::MainWindow(QWidget* parent) : DarkLightWindow{parent}
 
 void MainWindow::setupUI()
 {
-    setWindowIcon(QIcon(":/Program/resources/icons/icon.png"));
+    setWindowIcon(QIcon(":/resources/icons/icon.png"));
     setWindowTitle("Main window");
     setStyleSheet(StyleSheetsHelper::mergeStyles({
-            ":/Program/resources/styles/main.qss",
-            ":/Program/resources/styles/light.qss"
+            ":/resources/styles/main.qss",
+            ":/resources/styles/light.qss"
     }));
 
     setMinimumSize(700, 500);
 
+    mainLayout = new QVBoxLayout(mainWidget);
+    mainLayout->setSpacing(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+
     workspace = new Workspace(mainWidget);
     workspace->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+    mainLayout->addWidget(workspace);
 }
 
 void MainWindow::setupConnections()
@@ -35,15 +41,15 @@ void MainWindow::changeMode(bool isLight)
     if (isLight)
     {
         setStyleSheet(StyleSheetsHelper::mergeStyles({
-                ":/Program/resources/styles/main.qss",
-                ":/Program/resources/styles/light.qss"
+                ":/resources/styles/main.qss",
+                ":/resources/styles/light.qss"
         }));
         update();
         return;
     }
     setStyleSheet(StyleSheetsHelper::mergeStyles({
-            ":/Program/resources/styles/main.qss",
-            ":/Program/resources/styles/dark.qss"
+            ":/resources/styles/main.qss",
+            ":/resources/styles/dark.qss"
     }));
     update();
 }

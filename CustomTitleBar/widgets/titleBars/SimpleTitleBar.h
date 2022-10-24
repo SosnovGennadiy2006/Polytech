@@ -2,8 +2,8 @@
 // Created by genas on 03.10.2022.
 //
 
-#ifndef NOTESOFFICE_SIMPLETITLEBAR_H
-#define NOTESOFFICE_SIMPLETITLEBAR_H
+#ifndef POLYTECH_SIMPLETITLEBAR_H
+#define POLYTECH_SIMPLETITLEBAR_H
 
 #include "../../widgets/titleBars/TitleBar.h"
 
@@ -20,4 +20,4 @@ protected:
 };
 
 
-#endif//NOTESOFFICE_SIMPLETITLEBAR_H
+#endif//POLYTECH_SIMPLETITLEBAR_H
