@@ -1,5 +1,5 @@
 //
-// Created by Student on 17.10.2022.
+// Created by Gennadiy Sosnov on 17.10.2022.
 //
 
 #ifndef POLYTECH_IMAGE_H
@@ -10,14 +10,14 @@
 class Image : public QWidget{
     Q_OBJECT
 
-    QPixmap* loadedImage = nullptr;
+    QPixmap loadedImage;
 
 public:
     explicit Image(QWidget* parent = Q_NULLPTR);
 
-    void setPixmap(QPixmap* pix);
+    void setPixmap(const QPixmap& pix);
 
-    QPixmap* getPixmap() const;
+    QPixmap getPixmap() const;
 };
 
 

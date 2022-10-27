@@ -1,5 +1,5 @@
 //
-// Created by Student on 20.10.2022.
+// Created by Gennadiy Sosnov on 20.10.2022.
 //
 
 #include "StyledButton.h"

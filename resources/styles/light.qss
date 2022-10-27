@@ -43,6 +43,7 @@
 {
     border: none;
     border-radius: 5px;
+    padding: 0px 20px 0px 20px;
 }
 
 #colorButton QLabel
@@ -58,5 +59,17 @@
     background: #2389da;
 }
 
+#colorText
+{
+    color: #2389da;
+}
 
+#dataText
+{
+    color: #555;
+}
 
+#workArea
+{
+    background: #fff;
+}

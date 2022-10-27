@@ -1,5 +1,5 @@
 //
-// Created by Student on 20.10.2022.
+// Created by Gennadiy Sosnov on 20.10.2022.
 //
 
 #ifndef POLYTECH_CUSTOMBUTTON_H

@@ -1,5 +1,5 @@
 //
-// Created by Student on 24.10.2022.
+// Created by Gennadiy Sosnov on 24.10.2022.
 //
 
 #include "WelcomeContainer.h"
@@ -40,9 +40,9 @@ WelcomeContainer::WelcomeContainer(QWidget* parent) : QWidget{parent}
     layout1->addItem(hSpacer);
 
     widget2 = new QWidget(this);
-    layout2->setContentsMargins(0, 0, 0, 0);
 
     layout2 = new QHBoxLayout(widget2);
+    layout2->setContentsMargins(0, 0, 0, 0);
 
     welcomeLabel2 = new QLabel(widget2);
     welcomeLabel2->setText("This application can count the "
@@ -62,7 +62,6 @@ WelcomeContainer::WelcomeContainer(QWidget* parent) : QWidget{parent}
     openImageButton->setText("Open image");
     openImageButton->setFont(smallFont);
     openImageButton->setObjectName("colorButton");
-    openImageButton->setMinimumWidth(100);
 
     layout3->addItem(hSpacer);
     layout3->addWidget(openImageButton);
@@ -77,6 +76,10 @@ WelcomeContainer::WelcomeContainer(QWidget* parent) : QWidget{parent}
     mainLayout->addWidget(widget2);
     mainLayout->addWidget(widget3);
     mainLayout->addItem(vSpacer);
+
+    connect(openImageButton, &StyledButton::clicked, this, [this](){
+        emit openImageButtonClicked();
+    });
 }
 
 void WelcomeContainer::setIsLight(bool isLight)

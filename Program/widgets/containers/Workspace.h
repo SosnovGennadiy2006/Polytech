@@ -1,5 +1,5 @@
 //
-// Created by Student on 20.10.2022.
+// Created by Gennadiy Sosnov on 20.10.2022.
 //
 
 #ifndef POLYTECH_WORKSPACE_H
@@ -10,9 +10,11 @@
 #include <QGridLayout>
 #include <QSpacerItem>
 #include <QLabel>
+#include <QFileDialog>
 #include "../../widgets/buttons/StyledButton.h"
 #include "../../widgets/other/Image.h"
 #include "WelcomeContainer.h"
+#include "WorkArea.h"
 
 class StyledButton;
 
@@ -23,28 +25,7 @@ class Workspace : public QWidget{
 
     WelcomeContainer* welcome;
 
-    QWidget* imageWidget;
-    QHBoxLayout* imageLayout;
-    Image* mainImage;
-
-    QWidget* optionsWidget;
-    QHBoxLayout* optionsLayout;
-    StyledButton* enterImageButton;
-    StyledButton* addCircleButton;
-
-    QWidget* infoWidget;
-    QGridLayout* infoGrid;
-
-    QLabel* lbl1;
-    QLabel* lbl2;
-    QLabel* lbl3;
-
-    QLabel* info1;
-    QLabel* info2;
-    QLabel* info3;
-
-    QSpacerItem* spacer;
-    QSpacerItem* vSpacer;
+    WorkArea* workArea;
 
 public:
     explicit Workspace(QWidget* parent = Q_NULLPTR);
@@ -53,7 +34,7 @@ public:
 
 public slots:
     void setIsLight(bool isLight);
+    void openImage();
 };
-
 
 #endif//POLYTECH_WORKSPACE_H

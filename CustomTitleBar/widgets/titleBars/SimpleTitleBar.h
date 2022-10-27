@@ -1,5 +1,5 @@
 //
-// Created by genas on 03.10.2022.
+// Created by Gennadiy Sosnov on 03.10.2022.
 //
 
 #ifndef POLYTECH_SIMPLETITLEBAR_H

@@ -1,5 +1,5 @@
 //
-// Created by Student on 24.10.2022.
+// Created by Gennadiy Sosnov on 24.10.2022.
 //
 
 #ifndef POLYTECH_WELCOMECONTAINER_H
@@ -35,6 +35,9 @@ class WelcomeContainer : public QWidget{
 
 public:
     explicit WelcomeContainer(QWidget* parent = Q_NULLPTR);
+
+signals:
+    void openImageButtonClicked();
 
 public slots:
     void setIsLight(bool isLight);

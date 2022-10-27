@@ -1,5 +1,5 @@
 //
-// Created by genas on 18.10.2022.
+// Created by Gennadiy Sosnov on 18.10.2022.
 //
 
 #ifndef POLYTECH_DARKLIGHTTITLEBAR_H

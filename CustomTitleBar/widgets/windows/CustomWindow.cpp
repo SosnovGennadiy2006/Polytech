@@ -1,5 +1,5 @@
 //
-// Created by genas on 04.10.2022.
+// Created by Gennadiy Sosnov on 04.10.2022.
 //
 
 #include "CustomWindow.h"

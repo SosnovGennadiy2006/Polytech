@@ -1,5 +1,5 @@
 //
-// Created by Student on 17.10.2022.
+// Created by Gennadiy Sosnov on 17.10.2022.
 //
 
 #ifndef POLYTECH_STYLESHEETSHELPER_H
