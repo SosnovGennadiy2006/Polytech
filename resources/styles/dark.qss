@@ -69,6 +69,11 @@
     color: #bbb;
 }
 
+#workspace
+{
+    background: #222;
+}
+
 #workArea
 {
     background: #222;

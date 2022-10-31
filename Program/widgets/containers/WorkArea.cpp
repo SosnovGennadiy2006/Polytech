@@ -15,6 +15,8 @@ void WorkArea::setupUI()
 {
     setAttribute(Qt::WA_StyledBackground);
     setObjectName("workArea");
+    setMaximumWidth(1500);
+    setMinimumWidth(700);
 
     QFont bigFont;
     bigFont.setPixelSize(42);
@@ -124,11 +126,16 @@ void WorkArea::openImage()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
         tr("Open Image"), "", tr("Image Files (*.png *.jpg *.bmp)"));
-    ;
 
-    if (!fileName.isEmpty())
+    if (QString::compare(fileName, QString()) != 0)
     {
-        optionsWidget->show();
-        mainImage->setPixmap(QPixmap(fileName));
+        QImage image;
+        bool valid = image.load(fileName);
+        if (valid)
+        {
+            optionsWidget->show();
+            mainImage->setPixmap(QPixmap::fromImage(image));
+            return;
+        }
     }
 }

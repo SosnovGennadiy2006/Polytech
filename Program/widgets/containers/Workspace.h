@@ -23,9 +23,19 @@ class Workspace : public QWidget{
 
     QVBoxLayout* mainLayout;
 
+    QWidget* welcomeWrapper;
+
+    QHBoxLayout* welcomeLayout;
+
     WelcomeContainer* welcome;
 
+    QWidget *workAreaWrapper;
+
+    QHBoxLayout *workAreaLayout;
+
     WorkArea* workArea;
+
+    QSpacerItem* hSpacer;
 
 public:
     explicit Workspace(QWidget* parent = Q_NULLPTR);

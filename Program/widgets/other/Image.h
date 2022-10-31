@@ -6,11 +6,18 @@
 #define POLYTECH_IMAGE_H
 
 #include <QWidget>
+#include <QLabel>
+#include <QHBoxLayout>
+#include <QSpacerItem>
 
 class Image : public QWidget{
     Q_OBJECT
 
     QPixmap loadedImage;
+    QLabel* view;
+
+    QHBoxLayout* mainLayout;
+    QSpacerItem* hSpacer;
 
 public:
     explicit Image(QWidget* parent = Q_NULLPTR);
